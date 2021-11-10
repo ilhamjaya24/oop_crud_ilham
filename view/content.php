@@ -1,6 +1,7 @@
 <?php 
 
-include '../database.php';
+include '../controller/buku.php';
+var_dump($hasil);
 
-echo "Koneksi berhasil euy cuy";
  ?>
+ 

@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<h1>Ini nyobaa</h1>
-</body>
-</html>
+<?php 
+
+class prosesCrud{
+	protected $db;
+	function __construct($db){
+		$this->db=$db;
+	}
+	function tampil_data(){
+		$row = $this->db->prepare("SELECT * FROM 'tbl_buku'");
+		$row->execute();
+		return $hasil = $row ->fecthAll();
+	}
+
+}
+
+ ?>

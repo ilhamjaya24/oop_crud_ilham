@@ -1,6 +1,8 @@
 <?php 
 
 include '../controller/buku.php';
+$ctrl = new buku();
+$buku = $ctrl->index();
 // var_dump($hasil);
  ?>
 
@@ -65,7 +67,7 @@ include '../controller/buku.php';
                 <div class="col-lg-15">
                     <div class="card">
                         <div class="card-header bg-white text-uppercase">
-                    <div class="h3 text-center"><marquee scrollamount=10  ><b>Selamat Datang di Toko Buku IlhamStore  </b></marquee></div>
+                    <div class="h3 text-center"><marquee scrollamount=  ><b>Selamat Datang di Toko Buku IlhamStore  </b></marquee></div>
 
                             <div class="h2 text-center"><b>Data Buku</b></div>
                             <div class="float-end">
@@ -92,7 +94,7 @@ include '../controller/buku.php';
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($hasil as $data) { ?>
+                                        <?php foreach ($buku as $data) { ?>
                                             <?php
                                             if ($data['jenis_buku'] == 1) {
                                                 $jb = 'Motivasi';

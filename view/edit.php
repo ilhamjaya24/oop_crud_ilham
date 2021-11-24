@@ -6,7 +6,7 @@ $ctrl = new buku();
 $id = $_GET['id'];
 $dataisi = $ctrl->getData($id);
 
-
+$result_jenis= $ctrl->getJenisData();
 
 if ($dataisi['jenis_buku'] == 1) {
     $jb = 'Motivasi';
@@ -55,7 +55,7 @@ if ($dataisi['jenis_buku'] == 1) {
                             <div class="h3 text-center"><b>Edit Data Buku</b></div>
                         </div>
                         <div class="card-body">
-                           <form action="<?php $ctrl->editBuku(); ?>" method="post">
+                           <form action="<?php $ctrl->updateBuku(); ?>" method="post">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -108,14 +108,13 @@ if ($dataisi['jenis_buku'] == 1) {
                                                 <option value="2">Novel</option>
                                                 <option value="3">Biografi</option>
                                                 <option value="4">Mata Pelajaran</option>
-                                                <option value="5">Komik</option>
-                                                 
+                                                <option value="5">Komik</option>                 
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                     <div class="col-lg-6 mt-4" style="margin-right:80px; float: right;">
-                    <button type="submit" name="submit" class="btn btn-success text-white" >Update</button>
+                    <button type="update" name="update" class="btn btn-success text-white" >Update</button>
                    <a href="content.php" class="btn btn-warning">Cancel</a>
                                     </div>
 
@@ -133,7 +132,7 @@ if ($dataisi['jenis_buku'] == 1) {
                         
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> -->
     <script src="assets/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<?php
+<!-- <?php
 
 
 if (isset($_POST['submit'])) {
@@ -175,7 +174,7 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-
+ -->
 </body>
 
 </html>

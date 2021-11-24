@@ -82,7 +82,7 @@ $buku = $ctrl->index();
                                 <table class="table w-100" >
                                     <thead class="table-dark">
                                         <tr align="center">
-                                            <th >KODE BUKU</th>
+                                            <th>KODE BUKU</th>
                                             <th>JUDUL BUKU</th>
                                             <th>PENULIS</th>
                                             <th>PENERBIT</th>

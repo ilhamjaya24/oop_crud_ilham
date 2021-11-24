@@ -104,7 +104,7 @@ $dataisi = $ctrl->getJenisData();
                                         <div class="form-group" style="margin-top: 15px;">
                                             <small>JENIS BUKU</small>
                                            <select name="jenis_buku" id="jenis_buku" class="form-control">
-                                               
+                                                <option>Pilih...</option>
                                                 <option value="1">Motivasi</option>
                                                 <option value="2">Novel</option>
                                                 <option value="3">Biografi</option>

@@ -30,9 +30,9 @@ class buku{
 	 		$result = $this->model->hapusData($id);
 
 	 		if ($result) {
-	 			header("Location:index.php?pesan=success&frm=del");
+	 			header("Location:content.php?pesan=success&frm=del");
 	 		}else{
-	 			header("Location:index.php?pesan=gagal&frm=del");
+	 			header("Location:content.php?pesan=gagal&frm=del");
 	 		}
 	 	}
 	 }
@@ -46,8 +46,10 @@ class buku{
 	 		$tahun_terbit =$_POST['tahun_terbit'];
 	 		$tanggal_cetak =$_POST['tanggal_cetak'];
 	 		$jml_halaman =$_POST['jml_halaman'];
-	 		$jenis_surat =$_POST['jenis_surat'];
+	 		$jenis_buku = $_POST['jenis_buku'];
 
+
+// 53-62 merupakan parsing data (pembungkusan data)
 	 		$data[] = array (
 	 			'kd_buku'		=> $kd_buku,
 	 			'judul_buku'	=> $judul_buku,
@@ -56,19 +58,20 @@ class buku{
 	 			'tahun_terbit'	=> $tahun_terbit,
 	 			'tanggal_cetak'	=> $tanggal_cetak,
 	 			'jml_halaman'	=> $jml_halaman,
-	 			'jenis_surat'	=> $jenis_surat
+	 			'jenis_buku'	=> $jenis_buku
 	 		);
 	 		$result = $this->model->simpanData($data);
+
 	 		if ($result) {
-	 			header("Location:index.php?pesan=success&frm=add");
+	 			header("Location:content.php?pesan=success&frm=add");
 	 		}else{
-	 			header("Location:index.php?pesan=gagal&frm=add");
+	 			header("Location:content.php?pesan=gagal&frm=add");
 	 		}
 	 	}
 	 }
 	  function updateBuku(){
 	 	if (isset($_POST['update'])) {
-	 		$id = $_POST['id'];
+	 		$id = $_GET['id'];
 	 		$kd_buku =$_POST['kd_buku'];
 	 		$judul_buku =$_POST['judul_buku'];
 	 		$penulis =$_POST['penulis'];
@@ -76,7 +79,7 @@ class buku{
 	 		$tahun_terbit =$_POST['tahun_terbit'];
 	 		$tanggal_cetak =$_POST['tanggal_cetak'];
 	 		$jml_halaman =$_POST['jml_halaman'];
-	 		$jenis_surat =$_POST['jenis_surat'];
+	 		$jenis_buku =$_POST['jenis_buku'];
 
 	 		$data[] = array (
 	 			'kd_buku'		=> $kd_buku,
@@ -86,13 +89,13 @@ class buku{
 	 			'tahun_terbit'	=> $tahun_terbit,
 	 			'tanggal_cetak'	=> $tanggal_cetak,
 	 			'jml_halaman'	=> $jml_halaman,
-	 			'jenis_surat'	=> $jenis_surat
+	 			'jenis_buku'	=> $jenis_buku
 	 		);
 	 		$result = $this->model->updateData($data, $id);
 	 		if ($result) {
-	 			header("Location:index.php?pesan=success&frm=edot");
+	 			header("Location:content.php?pesan=success&frm=edot");
 	 		}else{
-	 			header("Location:index.php?pesan=gagal&frm=edit");
+	 			header("Location:content.php?pesan=gagal&frm=edit");
 	 		}
 	 	}
 	 }

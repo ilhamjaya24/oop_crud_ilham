@@ -1,5 +1,6 @@
 <?php
-require_once('koneksi.php');
+
+include '../controller/buku.php';
 
 $id = $_GET['id'];
 $delete_query = "DELETE FROM tbl_buku WHERE id = $id";

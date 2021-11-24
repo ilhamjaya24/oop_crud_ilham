@@ -21,36 +21,42 @@ class buku_model{
 		$row->execute();
 		return $hasil = $row->fetchAll();
 	}
-	function simpanData($data){
-		$rowSQL = array();
+	function simpanData($data)
+	{
+		$rowsSQL = array();
 		$toBind = array();
-		$columnNames = array_keys($data[0]);
+		$columnNames = array_keys($data[0]); //list name colomn
 
 		foreach ($data as $arrayIndex => $row) {
 			$params = array();
 			foreach ($row as $columnName => $columnValue) {
 				$param = ":" . $columnName . $arrayIndex;
 				$params[] = $param;
-				$toBind[$param] = $columnName;
+				$toBind[$param] = $columnValue;
 			}
-			$rowsSQL[] = "(" . implode(" ", $params) . ")";
+			$rowsSQL[] = "(" . implode(", ", $params) . ")";
 		}
-		$sql = "INSERT INTO tbl_buku(". implode(",", $columnNames) .") VALUES ".implode(" ", $rowsSQL);
+		$sql = "INSERT INTO tbl_buku(" . implode(", ", $columnNames) .") 
+		VALUES " . implode(", ", $rowsSQL);
 		$row = $this->db->prepare($sql);
 
 		foreach ($toBind as $param => $val){
-			$row ->bindValues($param, $val);
+			$row ->bindValue($param, $val);
 		}
+		return $row->execute();
 	}
 	function updateData($data, $id){
 		$setPart = array();
-		foreach ($data as $key => $value){
+		foreach ($data as $key => $value)
+		{
 			$setPart[] = $key."=:".$key;
 		}
-		$sql = "UPDATE tbl_buku SET ".implode(' ', $setPart)."WHERE id = :id";
+		$sql = "UPDATE tbl_buku SET ".implode(', ', $setPart)."WHERE id = :id";
 		$row = $this->db->prepare($sql);
+
 		$row -> bindValue(':id', $id); //where
-		foreach ($data as $param => $val) {
+		foreach ($data as $param => $val) 
+		{
 			$row ->bindValue($param, $val);
 		}
 		return $row ->execute();

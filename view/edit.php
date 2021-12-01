@@ -5,8 +5,7 @@ include '../controller/buku.php';
 $ctrl = new buku();
 $id = $_GET['id'];
 $dataisi = $ctrl->getData($id);
-
-$result_jenis= $ctrl->getJenisData();
+$jenis= $ctrl->getJenisData();
 
 if ($dataisi['jenis_buku'] == 1) {
     $jb = 'Motivasi';
@@ -55,7 +54,7 @@ if ($dataisi['jenis_buku'] == 1) {
                             <div class="h3 text-center"><b>Edit Data Buku</b></div>
                         </div>
                         <div class="card-body">
-                           <form action="<?php $ctrl->updateBuku(); ?>" method="post">
+                           <form action="<?php $ctrl->updateBuku($id); ?>" method="post">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">

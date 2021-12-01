@@ -49,17 +49,17 @@ class buku_model{
 		$setPart = array();
 		foreach ($data as $key => $value)
 		{
-			$setPart[] = $key."=:".$key;
+			$setPart[] = $key . "=:". $key;
 		}
-		$sql = "UPDATE tbl_buku SET ".implode(', ', $setPart)."WHERE id = :id";
+		$sql = "UPDATE tbl_buku SET " . implode(', ', $setPart)." WHERE id = :id";
 		$row = $this->db->prepare($sql);
-
-		$row -> bindValue(':id', $id); //where
-		foreach ($data as $param => $val) 
-		{
-			$row ->bindValue($param, $val);
+		// var_dump($sql);
+		// die;
+		$row->bindValue(':id', $id); //where
+		foreach ($data as $param => $val){
+			$row->bindValue($param, $val);
 		}
-		return $row ->execute();
+		return $row->execute();
 	}
 	function hapusData($id){
 		$sql = "DELETE FROM tbl_buku where id = ?";

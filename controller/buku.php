@@ -69,9 +69,9 @@ class buku{
 	 		}
 	 	}
 	 }
-	  function updateBuku(){
+	  function updateBuku($id){
 	 	if (isset($_POST['update'])) {
-	 		$id = $_GET['id'];
+	 		// $id = $_GET['id'];
 	 		$kd_buku =$_POST['kd_buku'];
 	 		$judul_buku =$_POST['judul_buku'];
 	 		$penulis =$_POST['penulis'];
@@ -81,7 +81,7 @@ class buku{
 	 		$jml_halaman =$_POST['jml_halaman'];
 	 		$jenis_buku =$_POST['jenis_buku'];
 
-	 		$data[] = array (
+	 		$data = array (
 	 			'kd_buku'		=> $kd_buku,
 	 			'judul_buku'	=> $judul_buku,
 	 			'penulis'	=> $penulis,
@@ -93,7 +93,7 @@ class buku{
 	 		);
 	 		$result = $this->model->updateData($data, $id);
 	 		if ($result) {
-	 			header("Location:content.php?pesan=success&frm=edot");
+	 			header("Location:content.php?pesan=success&frm=edit");
 	 		}else{
 	 			header("Location:content.php?pesan=gagal&frm=edit");
 	 		}

@@ -26,12 +26,6 @@ function tampil_data(){
         $row->execute();
         return $hasil = $row ->fetchAll();}
 
-    function tampil_data($tabel)
-    {
-        $row = $this->db->prepare("SELECT * FROM $tabel");
-        $row->execute();
-        return $hasil = $row->fetchAll();
-    }
 
 function getData($id){
         $row = $this->db->prepare("SELECT * FROM tbl_buku WHERE id = $id");

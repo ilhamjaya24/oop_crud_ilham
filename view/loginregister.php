@@ -1,6 +1,6 @@
 <?php
 
-include '../controller/auth_model.php';
+include '../controller/auth.php';
 
 $ctrl = new auth();
 
@@ -29,7 +29,7 @@ $ctrl = new auth();
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form>
+				<form >
 					<label for="chk" aria-hidden="true">Sign up</label>
 					<input type="text" name="username" placeholder="Username" required="">
 					<input type="password" name="password" placeholder="Password" required="">
@@ -43,11 +43,11 @@ $ctrl = new auth();
 			</div>
 
 			<div class="login">
-				<form>
+				<form >
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Login</button>
+					<input type="text" name="user" placeholder="Username" required="">
+					<input type="password" name="pass" placeholder="Password" required="">
+					<button type="submit" name="login">Login</button>
 				</form>
 			</div>
 	</div>

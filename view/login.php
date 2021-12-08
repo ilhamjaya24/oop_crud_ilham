@@ -6,6 +6,7 @@ include '../controller/auth.php';
 $ctrl = new auth();
 
 
+
  ?>
 
 <!DOCTYPE html>
@@ -114,8 +115,8 @@ $ctrl = new auth();
 </head>
 <body>
 <div class="wrapper">
-    <div class="logo"> <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt=""> </div>
-    <div class="text-center mt-4 name"> Twitter </div>
+    <div class="logo"> <img src="../img/lma.png" alt=""> </div>
+    <div class="text-center mt-4 name"> Orkestrator Kebaikan</div><br>
     <form class="p-3 mt-3" action="<?php echo $ctrl->login(); ?>" method="post">
         <div class="form-field d-flex align-items-center">
         <span class="far fa-user"></span> <input type="text" name="user" id="user" placeholder="Username"> </div>

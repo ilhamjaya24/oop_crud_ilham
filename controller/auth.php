@@ -30,10 +30,16 @@
 	      	session_start();
 	      	$_SESSION['nama_pengguna'] = $result['nama_pengguna'];
 	      	$_SESSION['username'] = $result['username'];
-	      	header("Location:content.php");
+	      	header("Location:content.php?pesan=success&frm=login");
 	      }
 	 	}
 	  }
+	  function logout(){
+	  	session_start();
+	  	session_destroy();
+	  	header("Location:login.php");
+	  }
 	}
+
 
  ?>

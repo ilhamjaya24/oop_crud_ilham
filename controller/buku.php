@@ -11,10 +11,19 @@ class buku{
 		$this->model = new buku_model($conn);
 		//menghilangkan pesan error
 	 }
-	 function index(){
-		$buku=$this->model->tampil_data();
+	 function index()
+	 {
+	 	//session itu untuk menyimpan data temporay
+	 	session_start();
+	 	if (!empty($_SESSION)) {
+	 		$buku=$this->model->tampil_data();
 	 	return $buku;
+	 	}else{
+	 		header("Location:login.php");
+	 	}
 	 }
+	 			
+	
 	 function getData($id){
 	 	$buku= $this->model->getData($id);
 	 	return $buku;
@@ -99,5 +108,14 @@ class buku{
 	 		}
 	 	}
 	 }
- }
+	 
+	 function logout(){
+	 	if(isset($_POST['logout'])){
+	 		session_start();
+	 		session_destroy();
+	 		header("Location:login.php");
+	 	}
+	 }
+ 
+}
  ?>

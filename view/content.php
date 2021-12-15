@@ -175,8 +175,10 @@ Logout
                                                 <td>
                           <a href="edit.php?id=<?= $data['id'] ?>" class="badge bg-warning text-dark p-2 text-decoration-none">Edit</a>
 
-                          <a href="#" class="badge bg-danger p-2 text-white text-decoration-none" data-target="#deletesurat<?= $data['id'] ?>">Delete</a>
-                                                
+                               <a href="delete.php?id=<?= $data['id'] ?>" class="badge bg-warning text-dark p-2 text-decoration-none">Delete</a>
+
+                         <!--  <a href="#" class="badge bg-danger p-2 text-white text-decoration-none" data-target="#deletesurat<?= $data['id'] ?>">Delete</a>
+                                                 -->
                                            
                                                     
                                                 

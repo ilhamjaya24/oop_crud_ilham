@@ -29,8 +29,11 @@ class buku{
 	 	return $buku;
 	 }
 	 function getJenisData(){
-	 	$jb = $this->model->getJenisData();
-	 	return $jb;
+	 	// $jb = $this->model->getJenisData();
+	 	// return $jb;
+
+	 	$jenis_buku = $this->model->getJenisData();
+		echo json_encode($jenis_buku);
 	 }
 	 function hapusBuku(){
 	 	if (isset($_POST['delete'])) {
@@ -43,6 +46,19 @@ class buku{
 	 		}else{
 	 			header("Location:content.php?pesan=gagal&frm=del");
 	 		}
+	 	}
+	 }
+
+	 function simpanJenis(){
+	 	$jenis_buku = $_POST['jenis_buku'];
+	 	$data[] = array(
+	 		'jenis_buku'		=>$jenis_buku,
+	 	);
+	 	$result = $this->model->simpanJenisData($data);
+	 	if ($result) {
+	 		echo "200";
+	 	}else{
+	 		echo "300";
 	 	}
 	 }
 

@@ -36,7 +36,7 @@ function getData($id){
     // variable where adalah isi kolom tabel yang mau diambil
     // variable id adalah id yang mau di ambil
     
-    
+   
 
 }
         

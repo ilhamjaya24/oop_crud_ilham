@@ -105,17 +105,16 @@ $ctrl = new buku();
                                            <select name="jenis_buku" id="jenis_buku" class="form-control">
 
                                                 <option>Pilih...</option>
-
-                                                <!-- <option value="1">Motivasi</option>
+                                                <option value="1">Motivasi</option>
                                                 <option value="2">Novel</option>
                                                 <option value="3">Biografi</option>
                                                 <option value="4">Mata Pelajaran</option>
                                                 <option value="5">Komik</option>
-                                                  -->
+                                                 
                                             </select>
                                         </div>
 
-<div class="example-modal">
+<!-- <div class="example-modal">
 <div id="ModalJenis" class="modal fade" role="dialog" style="display: none;">      
 <div class="modal" tabindex="-1">
   <div class="modal-dialog">
@@ -136,11 +135,11 @@ $ctrl = new buku();
       </form>
     </div>
   </div>
-</div></div></div>
-                                       <a href="" style="margin-right: 10px; float: right; margin-top: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+</div></div></div> -->
+                                      <!--  <a href="" style="margin-right: 10px; float: right; margin-top: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
   <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
 </a>
-</svg>
+</svg> -->
                                     </div></div>
                                     <div class="col-lg-6 mt-4" style="margin-right:85px; float: right;">
                      <button type="submit" name="submit" class="btn btn-success text-white">Tambah</button>

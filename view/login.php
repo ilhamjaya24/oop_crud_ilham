@@ -2,8 +2,8 @@
 
 
 include '../controller/auth.php';
-
 $ctrl = new auth();
+
 
 
 
@@ -13,6 +13,7 @@ $ctrl = new auth();
 <html>
 <head>
 	<title></title>
+
 	<style type="text/css">
 		 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -114,13 +115,24 @@ $ctrl = new auth();
 	</style>
 </head>
 <body>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <div class="wrapper">
-    <div class="logo"> <img src="../img/lma.png" alt=""> </div>
+    <div class="logo"> <img src="../img/lma.png" alt=""> </div><br>
     <div class="text-center mt-4 name"> Orkestrator Kebaikan</div><br>
     <form class="p-3 mt-3" action="<?php echo $ctrl->login(); ?>" method="post">
         <div class="form-field d-flex align-items-center">
-        <span class="far fa-user"></span> <input type="text" name="user" id="user" placeholder="Username"> </div>
-        <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="pass" id="pass" placeholder="Password"> </div> <button name="login" type="submit" class="btn mt-3">Login</button>
+        <span class="far fa-user"></span> <input type="text" name="user" id="user" placeholder="Username" required> </div>
+        <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="pass" id="pass" placeholder="Password"></div>
+        <div class="form-group">
+                            <img src="captcha.php" alt="gambar" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="code" value="" placeholder="kode captcha" maxlength="5"/>
+                        </div>
+                      <!--   <input class="btn btn-lg btn-success btn-block" type="submit" value="Register"> -->
+        <button name="login" type="submit" class="btn mt-3">Login</button>
+
     </form>
     <div class="text-center fs-6"> <a href="#">Forget password?</a> or <a href="#">Sign up</a> </div>
 </div>

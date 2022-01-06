@@ -3,7 +3,7 @@
 include '../controller/buku.php';
 $ctrl = new buku();
 $id = $_GET['id'];
-$delete_query = "DELETE FROM tbl_buku WHERE id = $id";
+$delete_query = "DELETE * FROM tbl_buku WHERE id = $id";
 $hasil = $ctrl->hapusBuku($delete_query);
 
 if ($hasil) {

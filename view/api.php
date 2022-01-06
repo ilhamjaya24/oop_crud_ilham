@@ -14,6 +14,7 @@
 			$ctrl->getJenisData(); //untuk membaca data
 			break;
 			case 'POST' : //membuat data
+			$ctrl->simpanJenis();
 			break;
 
 			case 'PUT' : //update

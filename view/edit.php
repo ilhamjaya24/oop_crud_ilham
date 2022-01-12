@@ -5,7 +5,7 @@ include '../controller/buku.php';
 $ctrl = new buku();
 $id = $_GET['id'];
 $dataisi = $ctrl->getData($id);
-$jenis= $ctrl->getJenisData();
+// $jenis= $ctrl->getJenisData();
 
 if ($dataisi['jenis_buku'] == 1) {
     $jb = 'Motivasi';

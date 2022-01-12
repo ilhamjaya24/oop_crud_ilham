@@ -118,8 +118,8 @@ $ctrl = new auth();
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <div class="wrapper">
-    <div class="logo"> <img src="../img/lma.png" alt=""> </div><br>
-    <div class="text-center mt-4 name"> Orkestrator Kebaikan</div><br>
+    <div class="logo"> <img src="../img/logo_ijk_ilhamjayakusumah.png" alt=""> </div><br>
+    <div class="text-center mt-4 name">Iqro-in Aja, Yuk.</div><br>
     <form class="p-3 mt-3" action="<?php echo $ctrl->login(); ?>" method="post">
         <div class="form-field d-flex align-items-center">
         <span class="far fa-user"></span> <input type="text" name="user" id="user" placeholder="Username" required> </div>
@@ -134,7 +134,7 @@ $ctrl = new auth();
         <button name="login" type="submit" class="btn mt-3">Login</button>
 
     </form>
-    <div class="text-center fs-6"> <a href="#">Forget password?</a> or <a href="#">Sign up</a> </div>
+    <!-- <div class="text-center fs-6"> <a href="#">Forget password?</a> or <a href="#">Sign up</a> </div> -->
 </div>
 </body>
 </html>

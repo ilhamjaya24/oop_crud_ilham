@@ -23,7 +23,7 @@
 	 	 	session_start();
 	 	 	if ($_POST["code"] != $_SESSION["code"] OR $_SESSION["code"]=='')
 	 	 	{
-	 	 	echo "Hamdun said : Captcha lepat lurr";
+	 	 	echo "Ilham said : Captcha lepat lurr";
 	 	 	}else{
 	 		$user = strip_tags($_POST['user']);
 	 		$pass = strip_tags($_POST['pass']);

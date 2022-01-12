@@ -38,7 +38,7 @@ class buku{
 	 function hapusBuku(){
 	 	if (isset($_POST['delete'])) {
 	 		$id = $_POST['id'];
-
+	 		
 	 		$result = $this->model->hapusData($id);
 
 	 		if ($result) {
@@ -135,3 +135,7 @@ class buku{
  
 }
  ?>
+
+
+
+

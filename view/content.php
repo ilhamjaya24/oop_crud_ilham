@@ -15,7 +15,7 @@ $buku = $ctrl->index();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Tilas UTS-Ilham Jaya Kusumah-MI20B</title>
+    <title>UAS-Ilham Jaya Kusumah-MI20B</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -173,9 +173,11 @@ Logout
                                               <td><a href="#" data-bs-toggle="modal" data-bs-target="#deletesurat<?php echo $data['id']; ?>">Delete</a></td> -->
 
                                                 <td>
-                          <a href="edit.php?id=<?= $data['id'] ?>" class="badge bg-warning text-dark p-2 text-decoration-none">Edit</a>
+                        <a href="edit.php?id=<?= $data['id'] ?>" class="badge bg-warning text-dark p-2 text-decoration-none">Edit</a>
 
-                               <a href="delete.php?id=<?= $data['id'] ?>" class="badge bg-warning text-dark p-2 text-decoration-none">Delete</a>
+                       <!--  <a href="delete.php?id=<?= $data['id'] ?>" class="badge bg-danger text-dark p-2 text-decoration-none">Delete</a> -->
+
+                          <a href="delete.php?id=<?= $data['id'] ?>" onclick="return confirm('Apakah yakin ingin menghapus data?')" class="badge bg-danger p-2 text-white text-decoration-none">Delete</a>
 
                          <!--  <a href="#" class="badge bg-danger p-2 text-white text-decoration-none" data-target="#deletesurat<?= $data['id'] ?>">Delete</a>
                                                  -->

@@ -3,6 +3,7 @@
 	class Database {
 		public function DBConnect(){
 			$dbhost = 'localhost';
+			// $dbname = 'db_oop_ilham';
 			$dbname = 'db_oop_ilham';
 			$dbuser = 'root';
 			$dbpass = '';
